@@ -3,7 +3,6 @@
    .mainwrap{
        background-color: @bg-body-color;
    }
-    
 </style>
 
 <template>
@@ -13,6 +12,11 @@
         <QuestionApp v-once/>
         <Solveway v-once/>
         <Feature />
+        <BrightSpot v-once/>
+        <Develop v-once/>
+        <SalePlan v-once/>
+        <Team v-once/>
+        <Aboutus v-once/>
     </div>
 </template>
 
@@ -22,19 +26,23 @@ import IndustryPosition from './industryPosition.vue'
 import QuestionApp from './questionApp.vue'
 import Solveway from './solveway.vue'
 import Feature from './feature.vue'
+import BrightSpot from './brightspot.vue'
+import Develop from './develop.vue'
+import SalePlan from './saleplan.vue'
+import Team from './team.vue'
+import Aboutus from './aboutus.vue'
 export default {
     components:{
         MainBanner,
         IndustryPosition,
         QuestionApp,
         Solveway,
-        Feature
-    },
-    data(){
-        return{
-        }
-    },
-    created(){
+        Feature,
+        BrightSpot,
+        Develop,
+        SalePlan,
+        Team,
+        Aboutus
     }
 }
 </script>

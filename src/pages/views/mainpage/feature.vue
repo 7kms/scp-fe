@@ -1,20 +1,26 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
-    .header{
-        font-size: 48/20rem;
-    }
     .content{
         position: relative;
         height: 900/20rem;
         padding-top: 133/20rem;
-        background-color: #fff;
+        // background-color: #fff;
         background-image:url('@img/feature-bg.png');
         background-position: center;
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        &.feature1{
-            background-image:url('@img/feature-1.png');
-        }
+       .circle{
+           left: 0;
+           top: 0;
+           width: 100%;
+           height: 200px;
+           position: absolute;
+           background-color: #fff;
+       }
+       .main{
+           position: relative;
+           z-index: 1;
+       }
     }
     .info{
         width: 1086/20rem;
@@ -140,33 +146,35 @@
 
 <template>
   <div :class="['content-item',$style.content]">
-      <div class="feature1"></div>
-      <h3 :class="['item-header','white',$style.header]">方案特点</h3>
-      <div :class="['clearfix',$style.info]">
-          <div :class="[$style.left,'fl']">
-              <div :class="['clearfix',$style.row]">
-                  <div :class="[$style.hexagon,$style.feature1,{[$style.active]:isActive(0)}]" @click="viewFeature(0)"></div>
-                  <div :class="[$style.hexagon,$style.feature2,{[$style.active]:isActive(1)}]" @click="viewFeature(1)"></div>
-              </div>
-              <div :class="['clearfix',$style.row]">
-                  <div :class="[$style.hexagon,$style.feature3,{[$style.active]:isActive(2)}]" @click="viewFeature(2)"></div>
-                  <div :class="[$style.hexagon,$style.feature4,{[$style.active]:isActive(3)}]" @click="viewFeature(3)"></div>
-                  <div :class="[$style.hexagon,$style.feature5,{[$style.active]:isActive(4)}]" @click="viewFeature(4)"></div>
-              </div>
-              <div :class="['clearfix',$style.row]">
-                  <div :class="[$style.hexagon,$style.feature6,{[$style.active]:isActive(5)}]" @click="viewFeature(5)"></div>
-                  <div :class="[$style.hexagon,$style.feature7,{[$style.active]:isActive(6)}]" @click="viewFeature(6)"></div>
-              </div>
-          </div>
-          <div :class="[$style.right,'fr']">
-              <div :class="$style.title">
-                  {{list[currentFeatureIndex].title}}
-              </div>
-              <div :class="$style.desc">
-                  {{list[currentFeatureIndex].desc}}
-              </div>
-          </div>
-      </div>
+    <!-- <div :class="$style.circle"></div> -->
+    <div :class="$style.main">
+        <h3 :class="['item-header','white']">方案特点</h3>
+        <div :class="['clearfix',$style.info]">
+            <div :class="[$style.left,'fl']">
+                <div :class="['clearfix',$style.row]">
+                    <div :class="[$style.hexagon,$style.feature1,{[$style.active]:isActive(0)}]" @click="viewFeature(0)"></div>
+                    <div :class="[$style.hexagon,$style.feature2,{[$style.active]:isActive(1)}]" @click="viewFeature(1)"></div>
+                </div>
+                <div :class="['clearfix',$style.row]">
+                    <div :class="[$style.hexagon,$style.feature3,{[$style.active]:isActive(2)}]" @click="viewFeature(2)"></div>
+                    <div :class="[$style.hexagon,$style.feature4,{[$style.active]:isActive(3)}]" @click="viewFeature(3)"></div>
+                    <div :class="[$style.hexagon,$style.feature5,{[$style.active]:isActive(4)}]" @click="viewFeature(4)"></div>
+                </div>
+                <div :class="['clearfix',$style.row]">
+                    <div :class="[$style.hexagon,$style.feature6,{[$style.active]:isActive(5)}]" @click="viewFeature(5)"></div>
+                    <div :class="[$style.hexagon,$style.feature7,{[$style.active]:isActive(6)}]" @click="viewFeature(6)"></div>
+                </div>
+            </div>
+            <div :class="[$style.right,'fr']">
+                <div :class="$style.title">
+                    {{list[currentFeatureIndex].title}}
+                </div>
+                <div :class="$style.desc">
+                    {{list[currentFeatureIndex].desc}}
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </template>
 <script>

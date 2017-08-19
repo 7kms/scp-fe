@@ -1,50 +1,48 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
-    @panelW: 380/20rem;
-    .content{
-        padding-bottom: 73/20rem;
-    }
-  .panelList{
-      width: (380*3+2*68)/20rem;
-      margin: 0 auto;
-      .panel{
-          width: @panelW;
-          height: @panelW;
-          padding: 56/20rem 50/20rem 80/20rem;
-          background-color: #fff;
-          box-shadow: 0 2/20rem 22/20rem 0 rgba(214,214,214,0.50);
-          img{
-              max-width: 100%;
-              max-height: 66.3/20rem;
-          }
-          &:not(:first-child){
-              margin-left: 68/20rem;
-          }
-      }
-      .title{
-          font-size: 18/20rem;
-          color: #316FFB;
-          margin-bottom: 32/20rem;
-          margin-top: 50/20rem;
-      }
-      .desc{
-          color: @font-color-normal;
-          font-size: 15/20rem;
-      }
-  }
+     .list{
+        width: 1221/20rem;
+        margin: 0 auto;
+     }
+     .item{
+         color: @font-color-normal;
+         margin-bottom: 40/20rem;
+         background-color: #fff;
+         box-shadow: 0 2/20rem 22/20rem 0 rgba(214,214,214,0.50);
+        .left{
+            width: 480/20rem;
+            height: 320/20rem;
+            img{
+                max-width: 100%;
+            }
+        }
+        .right{
+            padding-left:  66/20rem;
+            padding-top:45/20rem;
+            padding-right: 75/20rem;
+            width: (1221-480)/20rem;
+
+            .title{
+                font-weight: bolder;
+                margin-bottom:40/20rem;
+            }
+        }
+   }
 </style>
 
 <template>
-  <div :class="['content-item',$style.content]">
-      <h3 class="item-header">问题&应用</h3>
-      <div :class="['text-center','clearfix',$style.panelList]">
-         <div :class="['fl',$style.panel]" v-for="(panel, index) in list" :key="index">
-             <div>
-                 <img :src="panel.img">
-             </div>
-             <div :class="$style.title">{{panel.title}}</div>
-             <div :class="[$style.desc,'text-left']">{{panel.desc}}</div>
-         </div>
+  <div>
+      <h3 class="item-header">亮点分析</h3>
+      <div :class="[$style.list]">
+          <div :class="[$style.item,'clearfix']" v-for="(item,index) in list" :key="index">
+              <div :class="['fl',$style.left]">
+                  <img :src="item.img">
+              </div>
+              <div :class="['fr',$style.right]">
+                  <div :class="$style.title">{{item.title}}</div>
+                  <div class="desc-qoute">{{item.desc}}</div>
+              </div>
+          </div>
       </div>
   </div>
 </template>
@@ -54,19 +52,19 @@
             return{
                 list:[
                     {
-                        img:require('@img/qa-foundless.png'),
-                        title:'服务找不到？',
-                        desc:'基于区块链，低成本高效接入全球服务，开放生态建设，携手合作伙伴，为您提供更多服务。'
+                       title:'服务全球、全行业',
+                       img:require('@img/brightspot-1.png'),
+                       desc:'借助于区块链技术，让商链具备低成本、高效接入全球、全行业的个人和小微服务者的能力，而不仅是单一的某个地域某个行业的垂直服务平台。通过整合全球的个人和小微服务者，可以真正让服务打破限制，极大拓宽消费者的选择空间，也让跨地域跨行业的服务协作成为可能，让服务提供从量变发生质变。'
                     },
                     {
-                        img:require('@img/qa-trustless.png'),
-                        title:'服务信不过？',
-                        desc:'全场景实名制，交易记录科学保证无法篡改，假的永远真不了！'
+                       title:'开放生态体系',
+                       img:require('@img/brightspot-2.png'),
+                       desc:'不同于封闭的行业信用平台， 商链是开放的生态体系，个人和小微服务者的信用信息直接记录在区块链中，所有行业平台都可以访问并使用。也是将全球的服务者推向各个行业各个角落。此外，商链也面向全球选择生态合作伙伴，拓展信用支付的使用场景、使用行业，极大方便消费者，也实现商链的共赢发展。'
                     },
                     {
-                        img:require('@img/qa-payless.png'),
-                        title:'服务付不了？',
-                        desc:'商链提供信用中介与担保，并整合比特币第三方支付公司，虚拟币交易平台与当地金融机构，让您任意付，任性付。'
+                       title:'服务全球、全行业',
+                       img:require('@img/brightspot-3.png'),
+                       desc:'不同于普通的虚拟货币支付体系，商链通过整合交易所和第三方支付资源，可以实现当地货币与虚拟货币之间的顺畅切换，真正解区块链体系中的支付障碍，打通区块链生态系统应用的最后一英里。'
                     }
                 ]
             }
