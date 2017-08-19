@@ -1,12 +1,12 @@
 <style lang="less" module>
+    @import '../../../assets/less/const.less';
     .wrap{
         background-image: url('@img/banner.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
-        height: 965/20rem;
+        min-height: 965/20rem;
         padding-top: 1.5rem;
-
     }
     .content{
         width: 70%;
@@ -85,21 +85,5 @@
                 </article>
             </div>
         </div>
-        
     </div>
-    
 </template>
-
-<script>
-
-export default {
-    components:{
-    },
-    data(){
-        return{
-        }
-    },
-    created(){
-    }
-}
-</script>
