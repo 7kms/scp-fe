@@ -42,7 +42,7 @@
             width: @itemLW;
             .circle{
                 right: 0;
-                margin-right: -19/20rem;
+                margin-right: -20/20rem;
             }
         }
         &.itemR{
@@ -50,7 +50,7 @@
             margin-left: @itemLW; 
             .circle{
                 left: 0;
-                margin-left: -19/20rem;
+                margin-left: -20/20rem;
             }
             .text{
                 margin-left: 59/20rem;
@@ -69,7 +69,7 @@
         .circle{
             position: absolute;
             top: 0;
-            width: 38/20rem;
+            width: 40/20rem;
             height: 45/20rem;
             background-image: url('@img/develop-circle.png');
             background-repeat: no-repeat;
