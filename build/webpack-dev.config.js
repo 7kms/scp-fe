@@ -3,7 +3,12 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 let baseConfig = require('./webpack-base.config');
 let WebpackChunkHash = require("webpack-chunk-hash");
-let ipv4 = require('macaddress').networkInterfaces().en0.ipv4;
+let ipv4;
+try{
+    ipv4 = require('macaddress').networkInterfaces().en0.ipv4;
+}catch(e){
+    ipv4 = '127.0.0.1';
+}
 const devPort = 6100
 
 // const nodeModulePath = path.join(__dirname, '../node_modules')

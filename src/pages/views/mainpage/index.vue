@@ -3,15 +3,18 @@
    .mainwrap{
        background-color: @bg-body-color;
    }
+   .itemSpecial{
+       margin-top: -2.5rem;
+   }
 </style>
 
 <template>
     <div :class="$style.mainwrap">
         <MainBanner v-once/>
-        <IndustryPosition  v-once :class="$style.industryPosition"/>
+        <IndustryPosition  v-once :class="$style.itemSpecial"/>
         <QuestionApp v-once/>
         <Solveway v-once/>
-        <Feature />
+        <Feature v-once/>
         <BrightSpot v-once/>
         <Develop v-once/>
         <SalePlan v-once/>

@@ -1,5 +1,8 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
+    .wrap{
+        position: relative;
+    }
     .content{
         padding-top: 53/20rem;
         width: 1280/20rem;
@@ -59,12 +62,26 @@
         height: 1px;
         background: linear-gradient(-90deg, rgba(255,255,255,0.00) 2%, #5F6B83 16%, #5F6B83 85%, rgba(255,255,255,0.00) 99%);
     }
-   
+    .circle4{
+        right: 216/20rem;
+        top: 450/20rem;
+        width: 100/20rem;
+        height: 100/20rem;
+        background-image: url('@img/circle-4.png');
+    }
+    .circle5{
+        right: 281/20rem;
+        top: 900/20rem;
+        width: 39/20rem;
+        height: 39/20rem;
+        background-image: url('@img/circle-5.png');
+    }
 </style>
 
 <template>
   <div :class="['content-item',$style.wrap]">
-    <!-- <div :class="$style.circle"></div> -->
+    <!-- <div :class="[$style.circle4,'widget']"></div> -->
+    <!-- <div :class="[$style.circle5,'widget']"></div> -->
     <div :class="$style.content">
         <h3 :class="['item-header']">发售计划</h3>
         <div :class="$style.pen"></div>
