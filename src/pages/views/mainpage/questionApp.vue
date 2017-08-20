@@ -36,7 +36,7 @@
 
 <template>
   <div :class="['content-item',$style.content]">
-      <h3 class="item-header">问题&应用</h3>
+      <h3 class="item-header">服务行业问题&应对</h3>
       <div :class="['text-center','clearfix',$style.panelList]">
          <div :class="['fl',$style.panel]" v-for="(panel, index) in list" :key="index">
              <div>

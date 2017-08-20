@@ -34,7 +34,7 @@
 
 <template>
   <div :class="['content-item',$style.wrap]">
-      <h3 class="item-header">行业定位</h3>
+      <h3 class="item-header">服务行业定位</h3>
       <div class="text-center">
           <div :class="['desc-qoute',$style.qoute]">
                 打造个人及小微服务行业基础信用平台与支付服务，开放信用访问与生态合作建设生态链，建设样板行业应用引领生态建设，服务消费者。

@@ -63,7 +63,7 @@
 
 <template>
   <div :class="['content-item',$style.content]">
-      <h3 class="item-header">解决方案</h3>
+      <h3 class="item-header">商链解决方案</h3>
       <div :class="[$style.list,'text-center']">
           <div :class="[$style.item,'fl']" v-for="(item ,index) in list" :key="index">
               <div :class="$style.title">{{item.title}}</div>

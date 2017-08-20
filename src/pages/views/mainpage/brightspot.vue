@@ -32,7 +32,7 @@
 
 <template>
   <div>
-      <h3 class="item-header">亮点分析</h3>
+      <h3 class="item-header">商链亮点分析</h3>
       <div :class="[$style.list]">
           <div :class="[$style.item,'clearfix']" v-for="(item,index) in list" :key="index">
               <div :class="['fl',$style.left]">
