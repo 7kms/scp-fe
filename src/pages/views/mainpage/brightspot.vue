@@ -1,30 +1,30 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
      .list{
-        width: 1221/20rem;
+        width: 1221*@px2rem;
         margin: 0 auto;
      }
      .item{
          color: @font-color-normal;
-         margin-bottom: 40/20rem;
+         margin-bottom: 40*@px2rem;
          background-color: #fff;
-         box-shadow: 0 2/20rem 22/20rem 0 rgba(214,214,214,0.50);
+         box-shadow: 0 2*@px2rem 22*@px2rem 0 rgba(214,214,214,0.50);
         .left{
-            width: 480/20rem;
-            height: 320/20rem;
+            width: 480*@px2rem;
+            height: 320*@px2rem;
             img{
                 max-width: 100%;
             }
         }
         .right{
-            padding-left:  66/20rem;
-            padding-top:45/20rem;
-            padding-right: 75/20rem;
-            width: (1221-480)/20rem;
+            padding-left:  66*@px2rem;
+            padding-top:45*@px2rem;
+            padding-right: 75*@px2rem;
+            width: (1221-480)*@px2rem;
 
             .title{
                 font-weight: bolder;
-                margin-bottom:40/20rem;
+                margin-bottom:40*@px2rem;
             }
         }
    }

@@ -1,41 +1,41 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
-    @panelW: 409/20rem; @panelH: 684/20rem;
+    @panelW: 409*@px2rem; @panelH: 710*@px2rem;
     .content{
-        padding-bottom: 100/20rem;
+        padding-bottom: 100*@px2rem;
     }
   .panelList{
       color: @font-color-normal;
-      width: (409*3+2*30)/20rem;
+      width: (409*3+2*30)*@px2rem;
       margin: 0 auto;
       .panel{
           width: @panelW;
           height: @panelH;
           background-color: #fff;
-          box-shadow: 0 2/20rem 22/20rem 0 rgba(214,214,214,0.50);
+          box-shadow: 0 2*@px2rem 22*@px2rem 0 rgba(214,214,214,0.50);
           img{
               max-width: 100%;
-              max-height: 359/20rem;
+              max-height: 359*@px2rem;
           }
           &:not(:first-child){
-              margin-left: 29/20rem;
+              margin-left: 29*@px2rem;
           }
 
           .main{
-              padding: 30/20rem 40/20rem;
+              padding: 30*@px2rem 40*@px2rem;
           }
       }
       .name,.position{
-          font-size: 24/20rem;
+          font-size: 24*@px2rem;
           font-weight: bolder;
       }
       .position{
-          margin-top: 10/20rem;
-          margin-bottom: 20/20rem;
+          margin-top: 10*@px2rem;
+          margin-bottom: 20*@px2rem;
       }
       .desc{
           color: @font-color-normal;
-          font-size: 15/20rem;
+          font-size: 15*@px2rem;
       }
   }
 </style>
@@ -50,7 +50,7 @@
              </div>
              <div :class="$style.main">
                   <div :class="$style.name">{{panel.name}}</div>
-                    <div :class="$style.postion">{{panel.position}}</div>
+                    <div :class="$style.position">{{panel.position}}</div>
                     <div :class="[$style.desc,'text-left']">{{panel.desc}}</div>
              </div>
             

@@ -5,7 +5,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
-        min-height: 965/20rem;
+        min-height: 965*@px2rem;
         padding-top: 1.5rem;
     }
     .content{
@@ -14,34 +14,34 @@
         margin: 0 auto;
         padding: 0 .5rem;
         .logo{
-            margin-top: 80/20rem;
+            margin-top: 80*@px2rem;
             margin-left: auto;
             margin-right: auto;
-            width: 154/20rem;
-            height: 178/20rem;
+            width: 154*@px2rem;
+            height: 178*@px2rem;
             background:url('@img/main-logo.png') no-repeat;
-            background-size: 154/20rem 178/20rem;
+            background-size: 154*@px2rem 178*@px2rem;
         }
         .desc{
             color: #fff;
-            font-size: 18/20rem;
+            font-size: 18*@px2rem;
             .dfn1{
                 font-weight: bolder;
-                margin-top: 23/20rem;
-                font-size: 36/20rem;
+                margin-top: 23*@px2rem;
+                font-size: 36*@px2rem;
             }
             .dfn2{
-                margin-top: 13/20rem;
-                font-size: 30/20rem;
+                margin-top: 13*@px2rem;
+                font-size: 30*@px2rem;
             }
             .dfn3{
                 font-weight: bolder;
-                margin-top: 63/20rem;
-                font-size: 40/20rem;
+                margin-top: 63*@px2rem;
+                font-size: 40*@px2rem;
             }
              .dfn4{
-                margin-top: 44/20rem;
-                font-size: 18/20rem;
+                margin-top: 44*@px2rem;
+                font-size: 18*@px2rem;
             }
         }
     }
@@ -50,20 +50,20 @@
     }
     .title{
        font-weight: bolder;
-       width: 239/20rem;
-       height: 56/20rem;
+       width: 239*@px2rem;
+       height: 56*@px2rem;
        background-image: url('@img/SCP.png');
        background-repeat: no-repeat;
-       background-size: 239/20rem  56/20rem;
+       background-size: 239*@px2rem  56*@px2rem;
     }
     .link{
         display: block;
-        border: 2/20rem solid #FFFFFF;
-        width: 172/20rem;
-        height: 60/20rem;
-        line-height: 60/20rem;
-        border-radius: 7/20rem;
-        font-size: 32/20rem;
+        border: 2*@px2rem solid #FFFFFF;
+        width: 172*@px2rem;
+        height: 60*@px2rem;
+        line-height: 60*@px2rem;
+        border-radius: 7*@px2rem;
+        font-size: 32*@px2rem;
     }
 </style>
 

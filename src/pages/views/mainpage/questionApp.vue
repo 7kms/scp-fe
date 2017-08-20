@@ -1,35 +1,35 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
-    @panelW: 380/20rem;
+    @panelW: 380*@px2rem;
     .content{
-        padding-bottom: 73/20rem;
+        padding-bottom: 73*@px2rem;
     }
   .panelList{
-      width: (380*3+2*68)/20rem;
+      width: (380*3+2*68)*@px2rem;
       margin: 0 auto;
       .panel{
           width: @panelW;
           height: @panelW;
-          padding: 56/20rem 50/20rem 80/20rem;
+          padding: 56*@px2rem 50*@px2rem 80*@px2rem;
           background-color: #fff;
-          box-shadow: 0 2/20rem 22/20rem 0 rgba(214,214,214,0.50);
+          box-shadow: 0 2*@px2rem 22*@px2rem 0 rgba(214,214,214,0.50);
           img{
               max-width: 100%;
-              max-height: 66.3/20rem;
+              max-height: 66.3*@px2rem;
           }
           &:not(:first-child){
-              margin-left: 68/20rem;
+              margin-left: 68*@px2rem;
           }
       }
       .title{
-          font-size: 18/20rem;
+          font-size: 18*@px2rem;
           color: #316FFB;
-          margin-bottom: 32/20rem;
-          margin-top: 50/20rem;
+          margin-bottom: 32*@px2rem;
+          margin-top: 50*@px2rem;
       }
       .desc{
           color: @font-color-normal;
-          font-size: 15/20rem;
+          font-size: 15*@px2rem;
       }
   }
 </style>

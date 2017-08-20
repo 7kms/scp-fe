@@ -1,10 +1,10 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
-    @itemW: 740/20rem;
-    @itemH: 413/20rem;
+    @itemW: 740*@px2rem;
+    @itemH: 413*@px2rem;
     .content{
         background-color: #fff;
-        padding-top: 40/20rem;
+        padding-top: 40*@px2rem;
     }
     .list{
         position: relative;
@@ -21,7 +21,7 @@
             height: 1px;
             opacity: 0.3;
             top: 50%;
-            margin-top: -1/20rem;
+            margin-top: -1*@px2rem;
             left: 0;
             background-image: linear-gradient(-90deg, rgba(255,255,255,0.00) 2%, #5F6B83 16%, #5F6B83 85%, rgba(255,255,255,0.00) 99%);
         }
@@ -30,31 +30,31 @@
             height: 100%;
             opacity: 0.3;
             left: 50%;
-            margin-left: -1/20rem;
+            margin-left: -1*@px2rem;
             top: 0;
             background-image: linear-gradient(0deg, rgba(255,255,255,0.00) 2%, #5F6B83 16%, #5F6B83 85%, rgba(255,255,255,0.00) 99%);
         }
         .item{
             width: @itemW;
             height: @itemH;
-            padding-top: 55/20rem;
-            padding-bottom: 56/20rem;
-            padding-left: 84.5/20rem;
-            padding-right: 95.5/20rem;
+            padding-top: 55*@px2rem;
+            padding-bottom: 56*@px2rem;
+            padding-left: 84.5*@px2rem;
+            padding-right: 95.5*@px2rem;
         }
          .title{
             font-weight: bolder;
-            font-size: 18/20rem;
-            margin-bottom: 25/20rem;
+            font-size: 18*@px2rem;
+            margin-bottom: 25*@px2rem;
         }
         .desc{
-            font-size: 15/20rem;
+            font-size: 15*@px2rem;
         }
         .img{
-           margin-top:47/20rem;
+           margin-top:47*@px2rem;
             img{
-               max-height: 145/20rem;
-               max-width: 145/20rem;
+               max-height: 145*@px2rem;
+               max-width: 145*@px2rem;
             }
         }
     }
@@ -81,7 +81,7 @@
             return{
                 list:[
                     {
-                        img:require('@img/solve-2.png'),
+                        img:require('@img/solve-1.png'),
                         title:'消费者',
                         desc:'发现全球优质服务，总有一款适合你，使用商链信用支付，币种疆域再不是问题。'
                     },

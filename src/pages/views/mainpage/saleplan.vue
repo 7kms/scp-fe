@@ -4,26 +4,26 @@
         position: relative;
     }
     .content{
-        padding-top: 53/20rem;
-        width: 1280/20rem;
+        padding-top: 53*@px2rem;
+        width: 1280*@px2rem;
         margin: 0 auto;
         color: @font-color-normal;
         .pen{
-            margin-top: -28/20rem;
+            margin-top: -28*@px2rem;
             background-image: url('@img/plan-pen.png');
             background-repeat: no-repeat;
             background-position: left top;
-            background-size: 85/20rem 85/20rem;
-            height: 85/20rem;
+            background-size: 85*@px2rem 85*@px2rem;
+            height: 85*@px2rem;
         }
         .itemTitle{
             font-weight: bolder;
-            margin-bottom: 40/20rem;
-            font-size: 24/20rem;
+            margin-bottom: 40*@px2rem;
+            font-size: 24*@px2rem;
         }
         .desc{
-            font-size: 15/20rem;
-            margin-bottom: 42/20rem;
+            font-size: 15*@px2rem;
+            margin-bottom: 42*@px2rem;
             }
         .planItem{
             text-align: center;
@@ -32,14 +32,14 @@
             float: left;
         }
         .itemList1{
-            width: 1020/20rem;
+            width: 1020*@px2rem;
             margin: 0 auto;
            .item{
                &:not(:first-child){
-                   margin-left: 224/20rem;
+                   margin-left: 224*@px2rem;
                }
                .img{
-                   width: 129/20rem;
+                   width: 129*@px2rem;
                    margin: 0 auto;
                    img{
                        width: 100%;
@@ -50,30 +50,30 @@
         .itemList2{
            .item{
                &:not(:first-child){
-                   margin-left: 125/20rem;
+                   margin-left: 125*@px2rem;
                }
            }
         }
     }
     
     .split{
-        margin-top: 44/20rem;
-        margin-bottom: 48/20rem;
+        margin-top: 44*@px2rem;
+        margin-bottom: 48*@px2rem;
         height: 1px;
         background: linear-gradient(-90deg, rgba(255,255,255,0.00) 2%, #5F6B83 16%, #5F6B83 85%, rgba(255,255,255,0.00) 99%);
     }
     .circle4{
-        right: 216/20rem;
-        top: 450/20rem;
-        width: 100/20rem;
-        height: 100/20rem;
+        right: 216*@px2rem;
+        top: 450*@px2rem;
+        width: 100*@px2rem;
+        height: 100*@px2rem;
         background-image: url('@img/circle-4.png');
     }
     .circle5{
-        right: 281/20rem;
-        top: 900/20rem;
-        width: 39/20rem;
-        height: 39/20rem;
+        right: 281*@px2rem;
+        top: 900*@px2rem;
+        width: 39*@px2rem;
+        height: 39*@px2rem;
         background-image: url('@img/circle-5.png');
     }
 </style>

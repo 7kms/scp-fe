@@ -1,13 +1,13 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
-    @itemLW: 324/20rem;
+    @itemLW: 324*@px2rem;
     .wrap{
         position: relative;
         background-image: linear-gradient(-175deg, #4A4A4A 0%, #1B1D2B 100%);
-        height: 1070/20rem;
+        height: 1070*@px2rem;
         color: #fff;
         .main{
-            padding-top: 45/20rem;
+            padding-top: 45*@px2rem;
             position: absolute;
             left: 0;
             right: 0;
@@ -26,10 +26,10 @@
         &::before{
             content: '';
             position: absolute; 
-            // width: 38/20rem;
-            // height: 45/20rem;
-            top: 20/20rem;
-            bottom: 70/20rem;
+            // width: 38*@px2rem;
+            // height: 45*@px2rem;
+            top: 20*@px2rem;
+            bottom: 70*@px2rem;
             width: 1px;
             background-color: #fff;
             left: @itemLW;
@@ -42,39 +42,39 @@
             width: @itemLW;
             .circle{
                 right: 0;
-                margin-right: -20/20rem;
+                margin-right: -20*@px2rem;
             }
         }
         &.itemR{
-            width: 290/20rem;
+            width: 290*@px2rem;
             margin-left: @itemLW; 
             .circle{
                 left: 0;
-                margin-left: -20/20rem;
+                margin-left: -20*@px2rem;
             }
             .text{
-                margin-left: 59/20rem;
+                margin-left: 59*@px2rem;
             }
         }
         .text{
-            width: 286/20rem;
-            min-height: 96/20rem;
+            width: 286*@px2rem;
+            min-height: 96*@px2rem;
             .date{
-                font-size: 20/20rem;
+                font-size: 20*@px2rem;
             }
             .desc{
-                font-size: 15/20rem;
+                font-size: 15*@px2rem;
             }
         }
         .circle{
             position: absolute;
             top: 0;
-            width: 40/20rem;
-            height: 45/20rem;
+            width: 40*@px2rem;
+            height: 45*@px2rem;
             background-image: url('@img/develop-circle.png');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 105/20rem 107/20rem;
+            background-size: 105*@px2rem 107*@px2rem;
         }
     }
 </style>

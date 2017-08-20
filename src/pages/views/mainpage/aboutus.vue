@@ -1,22 +1,23 @@
 <style lang="less" module>
+    @import '../../../assets/less/const.less';
     .content{
         color: #fff;
-        height: 467/20rem;
+        height: 467*@px2rem;
         background-image: linear-gradient(-149deg, #00CEFF 0%, #3C57F9 100%);
     }
     .contactus{
         display: inline-block;
-        width: 571/20rem;
-        height: 60/20rem;
-        margin-top: 206/20rem;
-        line-height: 60/20rem;
-        border: 2/20rem solid #fff;
-        border-radius: 7/20rem;
-        font-size: 24/20rem;
+        width: 571*@px2rem;
+        height: 60*@px2rem;
+        margin-top: 206*@px2rem;
+        line-height: 60*@px2rem;
+        border: 2*@px2rem solid #fff;
+        border-radius: 7*@px2rem;
+        font-size: 24*@px2rem;
     }
     .copyright{
-        margin-top: 144/20rem;
-        font-size: 15/20rem;
+        margin-top: 144*@px2rem;
+        font-size: 15*@px2rem;
     }
 </style>
 

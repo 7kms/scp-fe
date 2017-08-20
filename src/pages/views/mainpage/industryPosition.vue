@@ -1,4 +1,5 @@
 <style lang="less" module>
+    @import '../../../assets/less/const.less';
     .wrap{
         position: relative;
 
@@ -8,25 +9,25 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto 100%;
-        height: 544/20rem;
-        margin-top: 25/20rem;
+        height: 544*@px2rem;
+        margin-top: 25*@px2rem;
     }
     .qoute{
         display: inline-block;
     }
     .circle1{
         right: 0;
-        top: 250/20rem;
-        width: 234/20rem;
-        height: 466/20rem;
+        top: 250*@px2rem;
+        width: 234*@px2rem;
+        height: 466*@px2rem;
         background-image: url('@img/circle-1.png');
     }
 
      .circle2{
         left: 0;
-        top: 1130/20rem;
-        width: 172/20rem;
-        height: 344/20rem;
+        top: 1130*@px2rem;
+        width: 172*@px2rem;
+        height: 344*@px2rem;
         background-image: url('@img/circle-2.png');
     }
 </style>

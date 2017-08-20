@@ -2,8 +2,8 @@
     @import '../../../assets/less/const.less';
     .content{
         position: relative;
-        height: 900/20rem;
-        padding-top: 133/20rem;
+        height: 900*@px2rem;
+        padding-top: 133*@px2rem;
         // background-color: #fff;
         background-image:url('@img/feature-bg.png');
         background-position: center;
@@ -23,44 +23,44 @@
        }
     }
     .info{
-        width: 1086/20rem;
+        width: 1086*@px2rem;
         margin: 0 auto;
     }
     .right{
-        width: 480/20rem;
+        width: 480*@px2rem;
         color: #fff;
         .title{
             font-weight: bolder;
-            font-size: 24/20rem;
-            padding-bottom: 20/20rem;
+            font-size: 24*@px2rem;
+            padding-bottom: 20*@px2rem;
             border-bottom: 1px solid #fff;
         }
         .desc{
-            font-size: 15/20rem;
-            padding-top: 20/20rem;
+            font-size: 15*@px2rem;
+            padding-top: 20*@px2rem;
         }
     }
     .left{
-        width: 481/20rem;
+        width: 481*@px2rem;
         &>div:nth-child(odd){
             padding-left: 147/40rem;
         }
         .row{
             & > div{
                 &:not(:first-child){
-                    margin-left: 20/20rem;
+                    margin-left: 20*@px2rem;
                 }
             }
-            margin-bottom: 65/20rem;
+            margin-bottom: 65*@px2rem;
         }
         .hexagon{
             position: relative;
             float: left;
             z-index: 2;
             background-color: #fff;
-            width: 147/20rem;
-            height: 80/20rem;
-            box-shadow: 0 2/20rem 14/20rem 0 #2B53AB;
+            width: 147*@px2rem;
+            height: 80*@px2rem;
+            box-shadow: 0 2*@px2rem 14*@px2rem 0 #2B53AB;
             background-position: center;
             background-repeat: no-repeat;
             &::before,&::after{
@@ -75,68 +75,68 @@
             }
             &::before{
                 
-                border-bottom: 45/20rem solid #fff;
+                border-bottom: 45*@px2rem solid #fff;
                 left: 0;
                 bottom: 100%;
             }
             &::after{
-                 border-top: 45/20rem solid #fff;
+                 border-top: 45*@px2rem solid #fff;
                  left: 0;
                  top: 100%;
             }
             &.feature1{
                 background-image: url('@img/feature-1.png');
-                background-size: 74/20rem 75/20rem;
+                background-size: 74*@px2rem 75*@px2rem;
                 &.active{
-                    background-size: 81/20rem 80/20rem;
+                    background-size: 81*@px2rem 80*@px2rem;
                      background-image: url('@img/feature-1-active.png')
                 }
             }
             &.feature2{
                 background-image: url('@img/feature-2.png');
-                background-size: 74/20rem 74/20rem;
+                background-size: 74*@px2rem 74*@px2rem;
                 &.active{
-                     background-size: 74/20rem 79/20rem;
+                     background-size: 74*@px2rem 79*@px2rem;
                      background-image: url('@img/feature-2-active.png')
                 }
             }
             &.feature3{
                 background-image: url('@img/feature-3.png');
-                background-size: 67/20rem 67/20rem;
+                background-size: 67*@px2rem 67*@px2rem;
                 &.active{
-                     background-size: 74/20rem 79/20rem;
+                     background-size: 74*@px2rem 79*@px2rem;
                      background-image: url('@img/feature-3-active.png')
                 }
             }
             &.feature4{
-                 background-size: 70/20rem 69/20rem;
+                 background-size: 70*@px2rem 69*@px2rem;
                 background-image: url('@img/feature-4.png');
                 &.active{
-                    background-size: auto 80/20rem;
+                    background-size: auto 80*@px2rem;
                     background-image: url('@img/feature-4-active.png')
                 }
             }
             &.feature5{
                 background-image: url('@img/feature-5.png');
-                background-size: 69/20rem 75/20rem;
+                background-size: 69*@px2rem 75*@px2rem;
                 &.active{
-                    background-size: auto 80/20rem;
+                    background-size: auto 80*@px2rem;
                     background-image: url('@img/feature-5-active.png');
                 }
             }
             &.feature6{
                 background-image: url('@img/feature-6.png');
-                background-size: 75/20rem 50/20rem;
+                background-size: 75*@px2rem 50*@px2rem;
                 &.active{
-                    background-size: 82/20rem 62/20rem;
+                    background-size: 82*@px2rem 62*@px2rem;
                     background-image: url('@img/feature-6-active.png');
                 }
             }
             &.feature7{
                 background-image: url('@img/feature-7.png');
-                background-size: 69/20rem 69/20rem;
+                background-size: 69*@px2rem 69*@px2rem;
                 &.active{
-                    background-size:auto 80/20rem;
+                    background-size:auto 80*@px2rem;
                     background-image: url('@img/feature-7-active.png')
                 }
             }
