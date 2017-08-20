@@ -39,4 +39,4 @@ jspm_packages
 
 .vscode/
 .idea/
-__dist/
+#__dist/
