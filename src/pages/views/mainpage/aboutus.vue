@@ -14,6 +14,7 @@
         border: 2*@px2rem solid #fff;
         border-radius: 7*@px2rem;
         font-size: 24*@px2rem;
+        color: #fff;
     }
     .copyright{
         margin-top: 144*@px2rem;
@@ -23,7 +24,7 @@
 
 <template>
   <div :class="[$style.content,'text-center']">
-      <div :class="$style.contactus">联系我们</div>
-      <div :class="$style.copyright">Copyright © 2017-2022 XXX 版权所有</div>
+      <a :class="$style.contactus" href="mailto:ico@servicechain.info">联系我们</a>
+      <div :class="$style.copyright">Copyright © 2017-2022 商链Labs 版权所有</div>
   </div>
 </template>

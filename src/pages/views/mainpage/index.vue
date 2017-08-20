@@ -1,6 +1,8 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
    .mainwrap{
+       width: 100%;
+       overflow: hidden;
        background-color: @bg-body-color;
    }
    .itemSpecial{

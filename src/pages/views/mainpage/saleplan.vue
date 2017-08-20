@@ -32,7 +32,7 @@
             float: left;
         }
         .itemList1{
-            width: 1020*@px2rem;
+            width: 1040*@px2rem;
             margin: 0 auto;
            .item{
                &:not(:first-child){
@@ -50,7 +50,7 @@
         .itemList2{
            .item{
                &:not(:first-child){
-                   margin-left: 125*@px2rem;
+                   margin-left: 80*@px2rem;
                }
            }
         }
@@ -100,7 +100,7 @@
             </div>
             <div :class="$style.split"></div>
             <div :class="[$style.planItem,$style.plan2] ">
-                <div :class="$style.itemTitle">SCP代币发行计划</div>
+                <div :class="$style.itemTitle">募集资金用途</div>
                 <div :class="[$style.itemList2,'clearfix']">
                     <div :class="$style.item" v-for="(item,index) in list2" :key="index">
                         <div :class="$style.img">

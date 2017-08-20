@@ -64,6 +64,7 @@
         line-height: 60*@px2rem;
         border-radius: 7*@px2rem;
         font-size: 32*@px2rem;
+        color: #fff;
     }
 </style>
 
@@ -72,7 +73,7 @@
         <div :class="$style.content">
             <header :class="[$style.header,'clearfix']">
                 <a :class="[$style.title,'fl']" href="./"></a>
-                <span :class="[$style.link,'fr','text-center']">白皮书</span>
+                <a :class="[$style.link,'fr','text-center']" href="http://www.servicechain.info/pdf/scp_intro.pdf" target="_blank">白皮书</a>
             </header>
             <div class="text-center">
                 <div :class="$style.logo"></div>
