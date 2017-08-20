@@ -48,9 +48,16 @@
            }
         }
         .itemList2{
+            width: 1032*@px2rem;
+            margin: 0 auto;
+            font-size: 15*@px2rem;
            .item{
+               width: 129*@px2rem;
                &:not(:first-child){
-                   margin-left: 80*@px2rem;
+                   margin-left: 165*@px2rem;
+               }
+               img{
+                   max-width: 100%;
                }
            }
         }
