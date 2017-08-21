@@ -29,7 +29,7 @@
             text-align: center;
         }
         .itemList1{
-            width: 930*@px2rem;
+            width: 950*@px2rem;
             margin: 0 auto;
            .item1{
                &:nth-child(2){
