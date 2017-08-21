@@ -34,7 +34,7 @@
            .item1{
                &:nth-child(2){
                    margin-left: 224*@px2rem;
-                   margin-right: 200*@px2rem;
+                   margin-right: 195*@px2rem;
                }
                .img1{
                    width: 147*@px2rem;
@@ -46,11 +46,11 @@
            }
         }
         .itemList2{
-            width: 1032*@px2rem;
+            width: 1132*@px2rem;
             margin: 0 auto;
             font-size: 15*@px2rem;
            .item2{
-               width: 129*@px2rem;
+            //    width: 129*@px2rem;
                &:nth-child(2){
                    margin-left: 165*@px2rem;
                }
