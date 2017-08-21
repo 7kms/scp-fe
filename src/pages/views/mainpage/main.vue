@@ -6,25 +6,24 @@
         background-position: center;
         background-size: 100% 100%;
         min-height: 965*@px2rem;
-        padding-top: 1.5rem;
+        padding-top: 39*@px2rem;
     }
     .content{
-        width: 70%;
-        min-width: 40rem;
+        width: 75%;
+        min-width: 45*@px2rem;
         margin: 0 auto;
         padding: 0 .5rem;
         .logo{
-            margin-top: 80*@px2rem;
+            margin-top: 79*@px2rem;
             margin-left: auto;
             margin-right: auto;
             width: 154*@px2rem;
             height: 178*@px2rem;
             background:url('@img/main-logo.png') no-repeat;
-            background-size: 154*@px2rem 178*@px2rem;
+            background-size: 100% 100%;
         }
         .desc{
             color: #fff;
-            font-size: 18*@px2rem;
             .dfn1{
                 font-weight: bolder;
                 margin-top: 23*@px2rem;
@@ -54,7 +53,7 @@
        height: 56*@px2rem;
        background-image: url('@img/SCP.png');
        background-repeat: no-repeat;
-       background-size: 239*@px2rem  56*@px2rem;
+       background-size: 100%  100%;
     }
     .link{
         display: block;

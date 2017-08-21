@@ -28,18 +28,16 @@
         .planItem{
             text-align: center;
         }
-        .item{
-            float: left;
-        }
         .itemList1{
-            width: 1040*@px2rem;
+            width: 930*@px2rem;
             margin: 0 auto;
-           .item{
-               &:not(:first-child){
+           .item1{
+               &:nth-child(2){
                    margin-left: 224*@px2rem;
+                   margin-right: 200*@px2rem;
                }
-               .img{
-                   width: 129*@px2rem;
+               .img1{
+                   width: 147*@px2rem;
                    margin: 0 auto;
                    img{
                        width: 100%;
@@ -51,14 +49,24 @@
             width: 1032*@px2rem;
             margin: 0 auto;
             font-size: 15*@px2rem;
-           .item{
+           .item2{
                width: 129*@px2rem;
-               &:not(:first-child){
+               &:nth-child(2){
                    margin-left: 165*@px2rem;
                }
-               img{
-                   max-width: 100%;
+                &:nth-child(3){
+                   margin-left: 186*@px2rem;
                }
+                &:nth-child(4){
+                   margin-left: 156*@px2rem;
+               }
+                .img2{
+                    width: 147*@px2rem;
+                   margin: 0 auto;
+                   img{
+                       width: 100%;
+                   }
+                }
            }
         }
     }
@@ -97,11 +105,11 @@
             <div :class="[$style.planItem,$style.plan1] ">
                 <div :class="$style.itemTitle">SCP代币发行计划</div>
                 <div :class="[$style.itemList1,'clearfix']">
-                    <div :class="$style.item" v-for="(item,index) in list1" :key="index">
-                        <div :class="$style.img">
-                            <img :src="item.img" alt="">
+                    <div :class="[$style.item1,'fl']" v-for="(item,index) in list1" :key="index">
+                        <div :class="$style.img1">
+                            <img :src="item.img">
                         </div>
-                        <div :class="$style.text" v-html="item.desc"></div>
+                        <div :class="$style.desc" v-html="item.desc"></div>
                     </div>
                 </div>
             </div>
@@ -109,8 +117,8 @@
             <div :class="[$style.planItem,$style.plan2] ">
                 <div :class="$style.itemTitle">募集资金用途</div>
                 <div :class="[$style.itemList2,'clearfix']">
-                    <div :class="$style.item" v-for="(item,index) in list2" :key="index">
-                        <div :class="$style.img">
+                    <div :class="[$style.item2,'fl']" v-for="(item,index) in list2" :key="index">
+                        <div :class="$style.img2">
                             <img :src="item.img">
                         </div>
                         <div :class="$style.desc" v-html="item.desc"></div>

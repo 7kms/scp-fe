@@ -24,7 +24,7 @@
     }
     .info{
         width: 1086*@px2rem;
-        margin: 0 auto;
+        margin: 74*@px2rem auto 0;
     }
     .right{
         width: 480*@px2rem;
@@ -41,9 +41,10 @@
         }
     }
     .left{
+        @width: 147*@px2rem;
         width: 481*@px2rem;
         &>div:nth-child(odd){
-            padding-left: 147/40rem;
+            padding-left:  @width/2;
         }
         .row{
             & > div{
@@ -58,7 +59,7 @@
             float: left;
             z-index: 2;
             background-color: #fff;
-            width: 147*@px2rem;
+            width: @width;
             height: 80*@px2rem;
             box-shadow: 0 2*@px2rem 14*@px2rem 0 #2B53AB;
             background-position: center;
@@ -70,8 +71,8 @@
                 width: 0;
                 border-color: transparent;
                 z-index: 1;
-                border-left: 147/40rem solid transparent;
-                border-right: 147/40rem solid transparent;
+                border-left: @width/2 solid transparent;
+                border-right: @width/2 solid transparent;
             }
             &::before{
                 

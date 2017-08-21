@@ -21,8 +21,8 @@
             padding-top:45*@px2rem;
             padding-right: 75*@px2rem;
             width: (1221-480)*@px2rem;
-
             .title{
+                font-size: 24*@px2rem;
                 font-weight: bolder;
                 margin-bottom:40*@px2rem;
             }

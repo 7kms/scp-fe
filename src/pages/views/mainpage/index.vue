@@ -6,7 +6,7 @@
        background-color: @bg-body-color;
    }
    .itemSpecial{
-       margin-top: -2.5rem;
+       margin-top: -56*@px2rem;
    }
 </style>
 
@@ -17,7 +17,7 @@
         <QuestionApp v-once/>
         <Solveway v-once/>
         <Feature v-once/>
-        <BrightSpot v-once/>
+        <BrightSpot v-once :class="$style.itemSpecial"/>
         <Develop v-once/>
         <SalePlan v-once/>
         <Team v-once/>
