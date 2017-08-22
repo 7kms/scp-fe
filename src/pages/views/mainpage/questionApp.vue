@@ -10,10 +10,12 @@
       .panel{
           width: @panelW;
           height: @panelW;
-          padding: 56*@px2rem 50*@px2rem 80*@px2rem;
+          padding: 56*@px2rem 50*@px2rem 0;
           background-color: #fff;
           box-shadow: 0 2*@px2rem 22*@px2rem 0 rgba(214,214,214,0.50);
           img{
+              display: block;
+              margin: 0 auto;
               max-width: 100%;
               max-height: 66.3*@px2rem;
           }
@@ -39,9 +41,7 @@
       <h3 class="item-header">服务行业问题&应对</h3>
       <div :class="['text-center','clearfix',$style.panelList]">
          <div :class="['fl',$style.panel]" v-for="(panel, index) in list" :key="index">
-             <div>
-                 <img :src="panel.img">
-             </div>
+             <img :src="panel.img">
              <div :class="$style.title">{{panel.title}}</div>
              <div :class="[$style.desc,'text-left']">{{panel.desc}}</div>
          </div>
