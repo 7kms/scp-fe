@@ -12,7 +12,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
 //生成html文件的输出配置
 const templatesFn = (modules) => {
     return Object.keys(modules).map((entryName) => {
-        let arr = ['config', 'vendor', 'commons', entryName];
+        let arr = ['manifest', 'vendor', 'commons', entryName];
         let chunks = arr;
         if(!isProduct){
             chunks.push('hrm');
@@ -195,7 +195,7 @@ module.exports = {
             chunks: [...pageArr]
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            names: ['vendor']
+            names: ['vendor','manifest']
         })
     ].concat(htmlTemplateOutPutArr)
 }
