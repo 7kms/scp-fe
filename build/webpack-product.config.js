@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 let baseConfig = require('./webpack-base.config');
-let WebpackChunkHash = require("webpack-chunk-hash");
 var ImageminPlugin = require('imagemin-webpack-plugin').default
 // const nodeModulePath = path.join(__dirname, '../node_modules');
 module.exports = merge(baseConfig, {

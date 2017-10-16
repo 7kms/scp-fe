@@ -14,15 +14,26 @@ const templatesFn = (modules) => {
     return Object.keys(modules).map((entryName) => {
         let arr = ['manifest', 'vendor', 'commons', entryName];
         let chunks = arr;
+        let iconPath = '../src/assets/images';
+        let obj = {}
         if(!isProduct){
             chunks.push('hrm');
         }
-        return new HtmlWebpackPlugin({
-            title: `${entryName}`,
+        switch(entryName){
+            case 'scp':
+                obj.title = '商链 SCP';
+                obj.favicon = `${iconPath}/scp-logo.png`;
+                break;
+            case 'asc':
+                obj.title = 'ASC';
+                obj.favicon = `${iconPath}/asc/asc-logo.png`;
+                break;
+        }
+        return new HtmlWebpackPlugin(Object.assign({
             template: '../src/template/index.html',
             filename: `${entryName}.html`,
             chunks
-        })
+        },obj))
     });
 }
 const pagePath = '../src/pages/containers';
@@ -33,6 +44,8 @@ let pageEntries = {};
 pageArr = pageArr.map((page) => {
     let nameArr = page.split('.');
     let ext = nameArr.pop();
+    let title = nameArr.join('');
+
     if (ext == 'js') {
         pageEntries[nameArr.join('')] = [`${pagePath}/${page}`];
         return nameArr.join('');
@@ -41,7 +54,7 @@ pageArr = pageArr.map((page) => {
 }).filter(page => !!page);
 let htmlTemplateOutPutArr = templatesFn(pageEntries);
 pageEntries.vendor = [
-    'babel-polyfill',
+    // 'babel-polyfill',
     'vue'
 ];
 module.exports = {
@@ -162,7 +175,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            "vue": path.join(nodeModulePath, 'vue/dist/vue.common.js'),
+            "vue": path.join(nodeModulePath, 'vue/dist/vue.runtime.esm.js'),
             "@src": path.join(__dirname, '../src'),
             "@img": path.join(__dirname, '../src/assets/images')
         }
@@ -191,7 +204,7 @@ module.exports = {
 
         new webpack.optimize.CommonsChunkPlugin({
             name: "commons",
-            minChunks: 3,
+            minChunks: 2,
             chunks: [...pageArr]
         }),
         new webpack.optimize.CommonsChunkPlugin({
