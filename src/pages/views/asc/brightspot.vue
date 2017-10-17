@@ -1,5 +1,9 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
+    .wrap{
+        padding-top: 43*@px2rem;
+        padding-bottom: 64*@px2rem;
+    }
      .list{
         width: 1221*@px2rem;
         margin: 0 auto;
@@ -31,8 +35,8 @@
 </style>
 
 <template>
-  <div>
-      <h3 class="item-header">商链亮点分析</h3>
+  <div :class="$style.wrap">
+      <h3 class="item-header">ASC Advantage Analysis</h3>
       <div :class="[$style.list]">
           <div :class="[$style.item,'clearfix']" v-for="(item,index) in list" :key="index">
               <div :class="['fl',$style.left]">
@@ -52,19 +56,19 @@
             return{
                 list:[
                     {
-                       title:'服务全球、全行业',
-                       img:require('@img/brightspot-1.png'),
-                       desc:'借助于区块链技术，让商链具备低成本、高效接入全球、全行业的个人和小微服务者的能力，而不仅是单一的某个地域某个行业的垂直服务平台。通过整合全球的个人和小微服务者，可以真正让服务打破限制，极大拓宽消费者的选择空间，也让跨地域跨行业的服务协作成为可能，让服务提供从量变发生质变。'
+                       title:'Serves global services of all industries',
+                       img:require('@img/asc/brightspot-1.png'),
+                       desc:'Different from traditional service platforms, based on blockchain technology, ASC can access global services of all industries with low cost and high efficiency.  Not restricted into single region or single industry. By integrating global personal and small company services, ASC could help to expand service scenarios, to integrate services in different regions and industries, to complete complex tasks.'
                     },
                     {
-                       title:'开放生态体系',
-                       img:require('@img/brightspot-2.png'),
-                       desc:'不同于封闭的行业信用平台， 商链是开放的生态体系，个人和小微服务者的信用信息直接记录在区块链中，所有行业平台都可以访问并使用。也是将全球的服务者推向各个行业各个角落。此外，商链也面向全球选择生态合作伙伴，拓展信用支付的使用场景、使用行业，极大方便消费者，也实现商链的共赢发展。'
+                       title:'Convenient payment experience',
+                       img:require('@img/asc/brightspot-2.png'),
+                       desc:'Different from traditional payment system, ASC integrates the exchange and third part payment system and local financial institutions, ASC provides a complete convenient payment solution, to solve the last mile of the payment application.  Anyone can pay any kind of currency for any service(not including drugs) in any region.'
                     },
                     {
-                       title:'便捷支付体验',
-                       img:require('@img/brightspot-3.png'),
-                       desc:'不同于普通的虚拟货币支付体系，商链通过整合交易所和第三方支付资源，可以实现当地货币与虚拟货币之间的顺畅切换，真正解决区块链体系中的支付障碍，打通区块链生态系统应用的最后一英里。'
+                       title:'Open eco-system',
+                       img:require('@img/asc/brightspot-3.png'),
+                       desc:'Different from traditional closed anonymous reputation platform, ASC is an open eco-system.  The reputation results of personal and small business services providers are recorded into the open blockchain, any one accesses the open blockchain could use it.  With this mechanism, we could push all the service providers global.'
                     }
                 ]
             }

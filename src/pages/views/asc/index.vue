@@ -13,15 +13,16 @@
 <template>
     <div :class="$style.mainwrap">
         <MainBanner v-once/>
-        <IndustryPosition  v-once :class="$style.itemSpecial"/>
+        <IndustryPosition  v-once />
         <QuestionApp v-once/>
         <Solveway v-once/>
+        <BrightSpot v-once/>
         <Feature v-once/>
-        <BrightSpot v-once :class="$style.itemSpecial"/>
-        <Develop v-once/>
-        <SalePlan v-once/>
-        <Team v-once/>
-        <Aboutus v-once/>
+        
+        <!-- <Develop v-once/> -->
+        <!-- <SalePlan v-once/> -->
+        <!-- <Team v-once/> -->
+        <!-- <Aboutus v-once/> -->
     </div>
 </template>
 

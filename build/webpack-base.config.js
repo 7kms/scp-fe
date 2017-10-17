@@ -44,7 +44,6 @@ let pageEntries = {};
 pageArr = pageArr.map((page) => {
     let nameArr = page.split('.');
     let ext = nameArr.pop();
-    let title = nameArr.join('');
 
     if (ext == 'js') {
         pageEntries[nameArr.join('')] = [`${pagePath}/${page}`];

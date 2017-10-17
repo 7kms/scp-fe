@@ -1,51 +1,78 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
-    @panelW: 380*@px2rem;
+    @panelW: 409*@px2rem;
+    @panelH: 460*@px2rem;
     .content{
-        padding-bottom: 73*@px2rem;
+        position: relative;
+        padding-bottom: 69*@px2rem;
     }
-  .panelList{
-      width: (380*3+2*68)*@px2rem;
+    .panelList{
+      width: (409*3+2*27)*@px2rem;
       margin: 0 auto;
       .panel{
           width: @panelW;
-          height: @panelW;
-          padding: 56*@px2rem 50*@px2rem 0;
+          height: @panelH;
+          padding: 47*@px2rem 49*@px2rem 0;
           background-color: #fff;
           box-shadow: 0 2*@px2rem 22*@px2rem 0 rgba(214,214,214,0.50);
           img{
               display: block;
               margin: 0 auto;
               max-width: 100%;
-              max-height: 66.3*@px2rem;
           }
           &:not(:first-child){
-              margin-left: 68*@px2rem;
+              margin-left: 27*@px2rem;
           }
+          &:nth-child(1){
+              img{
+                  height: 41*@px2rem
+              }
+              .desc{
+                margin-top:30*@px2rem;
+              }
+          }
+          &:nth-child(2){
+              img{
+                  height: 41*@px2rem
+              }
+              .desc{
+                margin-top:30*@px2rem;
+              }
+          }
+          &:nth-child(3){
+              img{
+                  height: 51*@px2rem
+              }
+              .desc{
+                margin-top:25*@px2rem;
+              }
+          }
+          .desc{
+            color: @font-color-normal;
+            font-size: 18*@px2rem;
+         }
       }
-      .title{
-          font-size: 18*@px2rem;
-          color: #316FFB;
-          margin-bottom: 32*@px2rem;
-          margin-top: 50*@px2rem;
-      }
-      .desc{
-          color: @font-color-normal;
-          font-size: 15*@px2rem;
-      }
-  }
+    }
+    .circle2{
+        left: 0;
+        top: 430*@px2rem;
+        width: 269*@px2rem;
+        height: 269*@px2rem;
+        margin-left: -269/2*@px2rem;
+        background-image: url('@img/asc/circle-2.png');
+    }
 </style>
 
 <template>
   <div :class="['content-item',$style.content]">
-      <h3 class="item-header">服务行业问题&应对</h3>
+      <h3 class="item-header">Anonymous Industry Problems</h3>
       <div :class="['text-center','clearfix',$style.panelList]">
          <div :class="['fl',$style.panel]" v-for="(panel, index) in list" :key="index">
              <img :src="panel.img">
-             <div :class="$style.title">{{panel.title}}</div>
              <div :class="[$style.desc,'text-left']">{{panel.desc}}</div>
          </div>
       </div>
+      <div :class="[$style.circle2,'widget']"></div>
   </div>
 </template>
 <script>
@@ -54,19 +81,16 @@
             return{
                 list:[
                     {
-                        img:require('@img/qa-foundless.png'),
-                        title:'服务找不到？',
-                        desc:'基于区块链，低成本高效接入全球服务，开放生态建设，携手合作伙伴，为您提供更多服务。'
+                        img:require('@img/asc/un-detectable.png'),
+                        desc:'Due to the region and industry limitation of the vertical service platforms, consumers could find mainstream services in the big cities. But as for small ones, high quality services or really special services are really hard to be detectable.'
                     },
                     {
-                        img:require('@img/qa-trustless.png'),
-                        title:'服务信不过？',
-                        desc:'全场景实名制，交易记录科学保证无法篡改，假的永远真不了！'
+                        img:require('@img/asc/un-trustful.png'),
+                        desc:'Service trust is now and always will be the biggest issue of online services industry, especially for the anonymous services.  Anonymous reputation is one of the solution for this issue.  But still not enough, should the reputation platform be trusted?  Even for some platform, the reputation manipulation is one of its income items.'
                     },
                     {
-                        img:require('@img/qa-payless.png'),
-                        title:'服务付不了？',
-                        desc:'商链提供信用中介与担保，并整合比特币第三方支付公司，虚拟币交易平台与当地金融机构，让您任意付，任性付。'
+                        img:require('@img/asc/un-payable.png'),
+                        desc:'Since lack of trust, anonymous services are really hard to pay. Besides the provider may be outside of the country, may not want to be transferred to his/her bank account, or may payment process will last for days, even weeks.  Or simply, do you trust him/her enough to pay the service all in one time, especially for an anonymous one.'
                     }
                 ]
             }

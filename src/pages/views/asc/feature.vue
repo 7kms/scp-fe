@@ -3,28 +3,13 @@
     .content{
         position: relative;
         height: 900*@px2rem;
-        padding-top: 133*@px2rem;
-        // background-color: #fff;
-        background-image:url('@img/feature-bg.png');
-        background-position: center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-       .circle{
-           left: 0;
-           top: 0;
-           width: 100%;
-           height: 200px;
-           position: absolute;
-           background-color: #fff;
-       }
-       .main{
-           position: relative;
-           z-index: 1;
-       }
+        padding-top: 60*@px2rem;
+        color: #fff;
+        background-color: #2D343E;
     }
     .info{
         width: 1086*@px2rem;
-        margin: 74*@px2rem auto 0;
+        margin: 81*@px2rem auto 0;
     }
     .right{
         width: 480*@px2rem;
@@ -64,6 +49,7 @@
             box-shadow: 0 2*@px2rem 14*@px2rem 0 #2B53AB;
             background-position: center;
             background-repeat: no-repeat;
+            background-size: 159*@px2rem 184*@px2rem;
             &::before,&::after{
                 content:'';
                 position: absolute;
@@ -85,60 +71,56 @@
                  left: 0;
                  top: 100%;
             }
+
             &.feature1{
-                background-image: url('@img/feature-1.png');
-                background-size: 74*@px2rem 75*@px2rem;
+                background-image: url('@img/asc/feature-1.png');
                 &.active{
-                    background-size: 81*@px2rem 80*@px2rem;
-                     background-image: url('@img/feature-1-active.png')
+                     background-image: url('@img/asc/feature-1-active.png')
                 }
             }
             &.feature2{
-                background-image: url('@img/feature-2.png');
-                background-size: 74*@px2rem 74*@px2rem;
+                background-size: 138*@px2rem 155*@px2rem;
+                background-image: url('@img/asc/feature-2.png');
                 &.active{
-                     background-size: 74*@px2rem 79*@px2rem;
-                     background-image: url('@img/feature-2-active.png')
+                     background-image: url('@img/asc/feature-2-active.png')
                 }
             }
             &.feature3{
-                background-image: url('@img/feature-3.png');
-                background-size: 67*@px2rem 67*@px2rem;
+                background-image: url('@img/asc/feature-3.png');
                 &.active{
-                     background-size: 74*@px2rem 79*@px2rem;
-                     background-image: url('@img/feature-3-active.png')
+                     background-image: url('@img/asc/feature-3-active.png')
                 }
             }
             &.feature4{
-                 background-size: 70*@px2rem 69*@px2rem;
-                background-image: url('@img/feature-4.png');
-                &.active{
-                    background-size: auto 80*@px2rem;
-                    background-image: url('@img/feature-4-active.png')
+                // margin-left: 0 !important;
+                box-shadow: none;
+                background-color: transparent;
+                background-size: 105*@px2rem 55*@px2rem;
+                background-image: url('@img/asc/title.png');
+                &::before{
+                    border-bottom-color: transparent;
+                }
+                &::after{
+                    border-top-color: transparent;
                 }
             }
             &.feature5{
-                background-image: url('@img/feature-5.png');
-                background-size: 69*@px2rem 75*@px2rem;
+                background-image: url('@img/asc/feature-5.png');
+                background-size: 150*@px2rem 170*@px2rem;
                 &.active{
-                    background-size: auto 80*@px2rem;
-                    background-image: url('@img/feature-5-active.png');
+                    background-image: url('@img/asc/feature-5-active.png');
                 }
             }
             &.feature6{
-                background-image: url('@img/feature-6.png');
-                background-size: 75*@px2rem 50*@px2rem;
+                background-image: url('@img/asc/feature-6.png');
                 &.active{
-                    background-size: 82*@px2rem 62*@px2rem;
-                    background-image: url('@img/feature-6-active.png');
+                    background-image: url('@img/asc/feature-6-active.png');
                 }
             }
             &.feature7{
-                background-image: url('@img/feature-7.png');
-                background-size: 69*@px2rem 69*@px2rem;
+                background-image: url('@img/asc/feature-7.png');
                 &.active{
-                    background-size:auto 80*@px2rem;
-                    background-image: url('@img/feature-7-active.png')
+                    background-image: url('@img/asc/feature-7-active.png')
                 }
             }
         }
@@ -147,9 +129,8 @@
 
 <template>
   <div :class="['content-item',$style.content]">
-    <!-- <div :class="$style.circle"></div> -->
     <div :class="$style.main">
-        <h3 :class="['item-header','white']">方案特点</h3>
+        <h3 :class="['item-header','white']">ASC solution characteristics</h3>
         <div :class="['clearfix',$style.info]">
             <div :class="[$style.left,'fl']">
                 <div :class="['clearfix',$style.row]">
@@ -182,32 +163,32 @@
             return{
                 list:[
                     {
-                        title:'实名制',
-                        desc:'使用Ethereumn区块链的智能合约，对个人服务者和小微企业实现实名制认证。将个人的信用在区块链全网范围内实现实名制。个人通过当地的身份证或者社会服务号，和护照双层实名认证，企业通过当地企业组织机构证和企业所有者双层认证。并对每一次提供的服务，每次的使用和评价结果都进行详细的记录，一次服务，终生可追溯。'
+                        title:'Anonymous Reputation',
+                        desc:'Using Ethereum blockchain and the smart contracts, we could build anonymous reputation for every individual or small business services provider.  On one side, any provider could access to the whole network by any kind of identity, like username and password, or social card info.  All the identity information will be hashed to identity code to protect the privacy.  On the other side, the ASC could track every service comment and payment, though the service is anonymous, the whole reputation of the provider shall be recorded and traced.'
                     },
                      {
-                        title:'防篡改',
-                        desc:'通过使用区块链技术，每次服务，每一次评价都在全网范围内进行记录和广播，并经过加密认证，防止不良平台对交易评价的人为修改，真正反映出服务提供者的服务质量好坏。一次欺诈，永无遁形。'
+                        title:'Tamper proofing',
+                        desc:'By using the blockchain technology, every service, every evaluation will be recorded and broadcasted within the whole network.  Also through encryption and authentication, any manipulation and tampering will be prevented.  Once fraud, never to hide.'
                     },
                      {
-                        title:'全球全行业接入',
-                        desc:'依托于Ethereum成熟的区块链网络，可以实现低成本的对全球全行业个人和小微企业服务者的信用接入，服务行业第一次实现全球资源调配。英国的管家服务，意大利的设计服务，菲律宾的家政服务，新加坡的导游服务可以任你选择。'
+                        title:'Global services of all industries',
+                        desc:'Relying on the mature blockchain network of Ethereum, it can realize the low cost reputation access of global services of all industries.  Our ecosystem partner could integrate the global services, like the design service of Italy, the guide service of Singapore, or the lawyer service of America.'
                     },
                      {
                         title:'信用无死角',
                         desc:'借用区块链本身开放的技术，商链也采用开放的态度来搭建生态系统。任何人都可以接入商链中查看服务提供者的信用情况，打破目前垂直行业中不同平台的信用壁垒，实现信用无死角，彻底掐断不良服务提供者逐个平台欺诈的可能性。'
                     },
                      {
-                        title:'信用支付中介',
-                        desc:'使用智能合约技术，商链可以作为信用服务中介，为服务双方提供可信的支付服务。服务前双方约定付款的批次以及标准，写入智能合约。只有达到标准才能完成每次付款，并确保达到标准后一定如约付款，商链作为中间方也提供担保服务，让双方真正实现无担忧交易。'
+                        title:'Reputation payment intermediary',
+                        desc:'Using the smart contract and the reputation system, although the services are provided anonymous, ASC could also play the role of the payment intermediary, even supplying the guarantee service for qualified reputations.<br/>With ASC as the payment intermediary, the whole payment process could be more smoothly.  The hardest part of the anonymous service could be conquered now.'
                     },
                      {
-                        title:'便捷支付',
-                        desc:'通过接入虚拟币交易平台，比特币第三方支付公司，Ethereumn平台，以及当地金融机构，在金融监管允许范围内，商链可以实现任何地域、任何行业、任何币种的便捷支付，真正打通区块链全球支付的最后一英里。让全球服务调配不在存在障碍。'
+                        title:'Convenient payment',
+                        desc:'By means of the crypto currency exchange markets, bitcoin payment companies, Ethereum network, as well as local financial institutions, ASC could make the payment more conveniently. Any region, any industry, any service (not including drugs) could be paid in any currency, including the crypto currency.  ASC solves the global service payment of the last mile.  There will be no more barrier for global service payment.'
                     },
                     {
-                        title:'开放生态',
-                        desc:'商链采用完全开放的态度来打造生态体系，共建良好的信用基础，拓展信用服务和智能服务场景。任何人都可以通过共有区块链的方式来获取个人和小微服务者的信用情况，并可以基于此来搭建信用应用。<br/>另一方面，商链也会在全球各行业选择合作伙伴，植入服务信用和便捷支付，商链也会选取几个样板领域自己构建应用，共同拓展信用服务场景和全球化服务场景。'
+                        title:'Open ecosystem',
+                        desc:'ASC adopts open attitudes to build our ecosystem, to build a solid reputation base, to expand the scenarios of the anonymous and intelligent services.  Anyone could access the reputation of personal and small business services through the public chain, could expand their services on it.<br/>On the other hand, ASC selects global partners of all industries.  The partners could use ASC payment service, also could join the reputation system.  Besides, ASC will choose a few sample industries to build its own application, to expand the service scenarios.'
                     }
                 ],
                 currentFeatureIndex:0
@@ -216,6 +197,7 @@
         
         methods:{
             viewFeature(num){
+                if(num == 3)return;
                 this.currentFeatureIndex = num;
             },
             isActive(index){

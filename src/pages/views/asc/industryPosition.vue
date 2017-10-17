@@ -1,17 +1,20 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
     .wrap{
+        padding-top: 30*@px2rem;
         position: relative;
     }
     .bgImg{
-        background-image: url('@img/industry-position.png');
+        background-image: url('@img/asc/industry-position.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto 100%;
-        height: 544*@px2rem;
+        height: 539*@px2rem;
         margin-top: 25*@px2rem;
     }
     .qoutewrap{
+        width: 1072*@px2rem;
+        margin: 0 auto;
         line-height: 25*@px2rem;
     }
     .qoute{
@@ -20,30 +23,22 @@
     .circle1{
         right: 0;
         top: 250*@px2rem;
-        width: 234*@px2rem;
-        height: 466*@px2rem;
-        background-image: url('@img/circle-1.png');
-    }
-
-     .circle2{
-        left: 0;
-        top: 1130*@px2rem;
-        width: 172*@px2rem;
-        height: 344*@px2rem;
-        background-image: url('@img/circle-2.png');
+        width: 390*@px2rem;
+        height: 390*@px2rem;
+        margin-right: -390/2*@px2rem;
+        background-image: url('@img/asc/circle-1.png');
     }
 </style>
 
 <template>
   <div :class="['content-item',$style.wrap]">
-      <h3 class="item-header">服务行业定位</h3>
-      <div :class="['text-center',$style.qoutewrap]">
+      <h3 class="item-header">Industry Orientation</h3>
+      <div :class="[$style.qoutewrap]">
           <div :class="['desc-qoute',$style.qoute]">
-                打造个人及小微服务行业基础信用平台与支付服务，开放信用访问与生态合作建设生态链，建设样板行业应用引领生态建设，服务消费者。
+                The ASC industry orientation is mainly to provide the industry basic reputation and payment services for personal and small company anonymous service providers, also to support other service platforms. ASC will choose several specified anonymous services to join the industry to build sample applications/platforms. 
           </div>
        </div>
       <div :class="$style.bgImg"></div>
       <div :class="[$style.circle1,'widget']"></div>
-      <div :class="[$style.circle2,'widget']"></div>
   </div>
 </template>

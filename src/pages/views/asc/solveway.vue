@@ -48,6 +48,7 @@
             margin-bottom: 25*@px2rem;
         }
         .desc{
+            min-height: 75*@px2rem;
             font-size: 15*@px2rem;
         }
         .img{
@@ -63,7 +64,7 @@
 
 <template>
   <div :class="['content-item',$style.content]">
-      <h3 class="item-header">商链解决方案</h3>
+      <h3 class="item-header">ASC Solution</h3>
       <div :class="[$style.list,'text-center']">
           <div :class="[$style.item,'fl']" v-for="(item ,index) in list" :key="index">
               <div :class="$style.title">{{item.title}}</div>
@@ -81,24 +82,24 @@
             return{
                 list:[
                     {
-                        img:require('@img/solve-1.png'),
-                        title:'消费者',
-                        desc:'发现全球优质服务，总有一款适合你，使用商链信用支付，币种疆域再不是问题。'
+                        img:require('@img/asc/solve-1.png'),
+                        title:'Consumers',
+                        desc:'Consumers could find any kind of qualified services around the world, find the services suits the most, and could pay in local currency or any digital currency conveniently.  Also ASC could be the credit guarantee, the consumer could no worry to be fraud.'
                     },
                     {
-                        img:require('@img/solve-2.png'),
-                        title:'个人及小微企业服务者',
-                        desc:'钻营品质服务，征服全球消费者，跨币跨境收款，优质信誉没有界限。'
+                        img:require('@img/asc/solve-2.png'),
+                        title:'Individual and small business providers',
+                        desc:'Individual and small business providers could provide services to access the global markets anonymously, to conquer the worldwide consumers with highly qualified service and reputation.'
                     },
                     {
-                        img:require('@img/solve-3.png'),
-                        title:'行业服务平台',
-                        desc:'开放访问商链信用，打通信用壁垒，塑造信用标准，劣质服务再无遁形。'
+                        img:require('@img/asc/solve-3.png'),
+                        title:'Industry platforms',
+                        desc:'Industry platforms could access the ASC reputation, to access and to integrate the global services.'
                     },
                     {
-                        img:require('@img/solve-4.png'),
-                        title:'生态合作伙伴',
-                        desc:'接入商链信用与支付体系，整合全球品质服务，扩宽自身服务平台，拓展全球服务场景，与商链平台，与全球消费者共赢。'
+                        img:require('@img/asc/solve-4.png'),
+                        title:'Ecosystem partners ',
+                        desc:'Ecosystem partners could not only access the reputation system, the global services, but also could use the payment system, to expand the service scenarios.'
                     }
                 ]
             }
