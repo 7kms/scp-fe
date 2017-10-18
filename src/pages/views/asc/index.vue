@@ -18,11 +18,10 @@
         <Solveway v-once/>
         <BrightSpot v-once/>
         <Feature v-once/>
-        
-        <!-- <Develop v-once/> -->
-        <!-- <SalePlan v-once/> -->
-        <!-- <Team v-once/> -->
-        <!-- <Aboutus v-once/> -->
+        <Develop v-once/>
+        <SalePlan v-once/>
+        <Team v-once/>
+        <Aboutus v-once/>
     </div>
 </template>
 

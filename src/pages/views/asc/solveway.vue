@@ -1,7 +1,7 @@
 <style lang="less" module>
     @import '../../../assets/less/const.less';
     @itemW: 740*@px2rem;
-    @itemH: 413*@px2rem;
+    @itemH: 430*@px2rem;
     .content{
         background-color: #fff;
         padding-top: 40*@px2rem;
@@ -44,12 +44,12 @@
         }
          .title{
             font-weight: bolder;
-            font-size: 18*@px2rem;
+            font-size: 20*@px2rem;
             margin-bottom: 25*@px2rem;
         }
         .desc{
-            min-height: 75*@px2rem;
-            font-size: 15*@px2rem;
+            min-height: 88*@px2rem;
+            font-size: 18*@px2rem;
         }
         .img{
            margin-top:47*@px2rem;

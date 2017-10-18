@@ -2,7 +2,7 @@
     @import '../../../assets/less/const.less';
     .content{
         position: relative;
-        height: 900*@px2rem;
+        height: 869*@px2rem;
         padding-top: 60*@px2rem;
         color: #fff;
         background-color: #2D343E;
@@ -21,13 +21,13 @@
             border-bottom: 1px solid #fff;
         }
         .desc{
-            font-size: 15*@px2rem;
+            font-size: 18*@px2rem;
             padding-top: 20*@px2rem;
         }
     }
     .left{
-        @width: 147*@px2rem;
-        width: 481*@px2rem;
+        @width: 159*@px2rem;
+        width: 521*@px2rem;
         &>div:nth-child(odd){
             padding-left:  @width/2;
         }
@@ -45,7 +45,7 @@
             z-index: 2;
             background-color: #fff;
             width: @width;
-            height: 80*@px2rem;
+            height: 90*@px2rem;
             box-shadow: 0 2*@px2rem 14*@px2rem 0 #2B53AB;
             background-position: center;
             background-repeat: no-repeat;
@@ -92,7 +92,8 @@
                 }
             }
             &.feature4{
-                // margin-left: 0 !important;
+                margin-left: 0 !important;
+                width: 181*@px2rem;
                 box-shadow: none;
                 background-color: transparent;
                 background-size: 105*@px2rem 55*@px2rem;
@@ -105,6 +106,7 @@
                 }
             }
             &.feature5{
+                margin-left: 0 !important;
                 background-image: url('@img/asc/feature-5.png');
                 background-size: 150*@px2rem 170*@px2rem;
                 &.active{

@@ -3,7 +3,7 @@
     .content{
         color: #fff;
         height: 467*@px2rem;
-        background-image: linear-gradient(-149deg, #00CEFF 0%, #3C57F9 100%);
+        background-image: linear-gradient(-179deg, #252E3A 0%, #3C434D 100%);
     }
     .contactus{
         display: inline-block;
@@ -24,7 +24,7 @@
 
 <template>
   <div :class="[$style.content,'text-center']">
-      <a :class="$style.contactus" href="mailto:ico@servicechain.info">联系我们</a>
-      <div :class="$style.copyright">Copyright © 2017-2022 商链Labs 版权所有</div>
+      <a :class="$style.contactus" href="mailto:ico@servicechain.info">contact us</a>
+      <div :class="$style.copyright">Copyright © 2017-2022 ASC</div>
   </div>
 </template>
