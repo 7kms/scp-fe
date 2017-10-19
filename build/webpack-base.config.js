@@ -1,5 +1,4 @@
 const path = require('path');
-const fs = require('fs');
 const webpack = require('webpack');
 const nodeModulePath = path.join(__dirname, '../node_modules');
 const isProduct = process.env.NODE_ENV === 'production';
@@ -9,56 +8,12 @@ let OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 
-//生成html文件的输出配置
-const templatesFn = (modules) => {
-    return Object.keys(modules).map((entryName) => {
-        let arr = ['manifest', 'vendor', 'commons', entryName];
-        let chunks = arr;
-        let iconPath = '../src/assets/images';
-        let obj = {}
-        if(!isProduct){
-            chunks.push('hrm');
-        }
-        switch(entryName){
-            case 'scp':
-                obj.title = '商链 SCP';
-                obj.favicon = `${iconPath}/scp-logo.png`;
-                break;
-            case 'asc':
-                obj.title = 'ASC';
-                obj.favicon = `${iconPath}/asc/asc-logo.png`;
-                break;
-        }
-        return new HtmlWebpackPlugin(Object.assign({
-            template: '../src/template/index.html',
-            filename: `${entryName}.html`,
-            chunks
-        },obj))
-    });
-}
-const pagePath = '../src/pages/containers';
-let pageArr = fs.readdirSync(path.resolve(__dirname, pagePath));
-
-//构造页面入口文件
-let pageEntries = {};
-pageArr = pageArr.map((page) => {
-    let nameArr = page.split('.');
-    let ext = nameArr.pop();
-
-    if (ext == 'js') {
-        pageEntries[nameArr.join('')] = [`${pagePath}/${page}`];
-        return nameArr.join('');
-    }
-    return '';
-}).filter(page => !!page);
-let htmlTemplateOutPutArr = templatesFn(pageEntries);
-pageEntries.vendor = [
-    // 'babel-polyfill',
-    'vue'
-];
 module.exports = {
     context: path.resolve(__dirname),
-    entry: pageEntries,
+    entry: {
+        vendor:['vue'],
+        app:['../src/pages/index.js']
+    },
     output: {
         path: path.resolve(__dirname, '../__dist'),
         publicPath: './',
@@ -201,13 +156,17 @@ module.exports = {
             canPrint: true
         }),
 
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "commons",
-            minChunks: 2,
-            chunks: [...pageArr]
-        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: "commons",
+        //     minChunks: 2
+        // }),
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor','manifest']
+        }),
+        new HtmlWebpackPlugin({
+            title:'商链',
+            template: '../src/template/index.html',
+            filename: `index.html`
         })
-    ].concat(htmlTemplateOutPutArr)
+    ]
 }
